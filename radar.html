@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Radar</title>
+    <style>
+    body {
+        background: #333;
+        color: #fff;
+    }
+    #holder {
+        height:600px;
+        left: 50%;
+        margin: -250px 250px 250px -250px;
+        position: absolute;
+        top: 50%;
+        width: 600px;
+        z-index:50;
+    }
+    </style>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
+    <script src="http://yandex.st/raphael/1.5.2/raphael.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+    
+    var radar =null;
+    var d = 0 
+    var t;
+    var paper = null;
+    var pos = new Array(10);
+ 
+    function startRadar()
+    {   
+       radar.rotate(d,250,300);
+       d=d+1;
+       if (d>360) d=0;
+       t=setTimeout("startRadar()",30);
+    }
+    
+    function stopRadar()
+    {
+        clearTimeout(t);
+        radar.hide();
+    }
+    
+    function openRadar()
+    {
+        var circle = paper.circle(250, 300, 10);
+        circle.attr({
+            "fill": "90-#1151f5:5-#4bc1ff:95",
+            "stroke": "#fff"
+        }); 
+        circle.animate({r: 250},2000 );
+        radar = paper.path("M250,300 v250 a250,250 0 0,0 220,-130 z");
+        radar.hide();
+        radar.attr({
+            "fill":"45-#ff0:20-#ff0:50",
+            "fill-opacity": "0.01",
+            "stroke":""
+        });
+    }
+    
+    
+    $(document).ready(function(){
+            paper= Raphael("holder", 600, 600);
+            openRadar();
+            setTimeout(function () {
+                radar.show();
+                startRadar();
+  
+              }, 3000);
+    });
+    </script> 
+  </head>
+  <body>
+        <input id="startBtn" type="button" disabled="disabled" onclick="this.disabled=true; radar.show();  startRadar(); document.getElementById('stopBtn').disabled=false" value="Start"/>
+        <input id="stopBtn" type="button" onclick="this.disabled=true; radar.hide(); stopRadar();document.getElementById('startBtn').disabled=false" value="Stop"/>
+
+        <div id="holder"></div>
+  </body>
+</html>
