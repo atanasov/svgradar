@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   width="744.09448"
+   height="1052.3622"
+   id="svg2">
+  <defs
+     id="defs4">
+    <linearGradient
+       id="linearGradientCircle">
+      <stop
+         id="stop3661"
+         style="stop-color:#ffff00;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop3663"
+         style="stop-color:#ffff00;stop-opacity:0"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradientRadar">
+      <stop
+         id="stop3611"
+         style="stop-color:#1151f5;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop3607"
+         style="stop-color:#4bc1ff;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="210.79247"
+       y1="517.53876"
+       x2="251.82861"
+       y2="553.7522"
+       id="linearGradient3968"
+       xlink:href="#linearGradientCircle"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0084352,0,0,0.71291185,-297.36854,696.1003)" />
+    <linearGradient
+       x1="350.71429"
+       y1="597.14789"
+       x2="350.71429"
+       y2="243.29076"
+       id="linearGradient3972"
+       xlink:href="#linearGradientRadar"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.84798963,0,0,0.84779974,-297.36854,696.1003)" />
+  </defs>
+  <g
+     transform="translate(316.60048,-771.43499)"
+     id="layer1">
+    <path
+       d="m 149.64315,1052.3621 a 149.6096,149.5761 0 0 1 -299.21921,0 149.6096,149.5761 0 1 1 299.21921,0 z"
+       id="circle"
+       style="fill:url(#linearGradient3972);fill-opacity:1;stroke:#000000;stroke-width:0.84789467;stroke-opacity:1">
+      <title
+         id="title3671">circle</title>
+    </path>
+    <path
+       d="m -105.75642,1158.1284 a 149.6096,149.5761 0 0 1 -43.81964,-105.7663 l 149.60960101,0 z"
+       id="radar"
+       style="fill:url(#linearGradient3968);fill-opacity:1;stroke:none">
+      <title
+         id="title3667">radar</title>
+    </path>
+  </g>
+</svg>
